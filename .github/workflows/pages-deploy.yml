@@ -46,7 +46,16 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll b --baseurl "/DevOps-blog" -d "_site${{ steps.pages.outputs.base_path }}"
+        run: |
+          echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
+      
+          bundle exec jekyll build \
+            --config _config.yml \
+            --baseurl "/DevOps-blog" \
+            --destination "_site/DevOps-blog"
+      
+          echo "Checking generated links:"
+          grep -o 'app.min.js[^"]*' _site/DevOps-blog/index.html | head -1
         env:
           JEKYLL_ENV: "production"
 
