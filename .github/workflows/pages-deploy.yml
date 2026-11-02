@@ -47,15 +47,18 @@ jobs:
 
       - name: Build site
         run: |
-          echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
+          echo "=== CONFIG ==="
+          grep -nE '^(url|baseurl):' _config.yml
       
+          echo "=== BUILD ==="
           bundle exec jekyll build \
             --config _config.yml \
             --baseurl "/DevOps-blog" \
-            --destination "_site/DevOps-blog"
+            -d "_site${{ steps.pages.outputs.base_path }}"
       
-          echo "Checking generated links:"
-          grep -o 'app.min.js[^"]*' _site/DevOps-blog/index.html | head -1
+          echo "=== GENERATED HTML ==="
+          grep -o 'app.min.js[^"]*' \
+            "_site${{ steps.pages.outputs.base_path }}/index.html" | head -1
         env:
           JEKYLL_ENV: "production"
 
