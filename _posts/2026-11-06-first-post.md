@@ -46,4 +46,4 @@ Docker부터 시작해서 Kubernetes, AWS, Terraform, CI/CD, 모니터링까지 
 그래도 일단 해보자.
 
 
-![DevOps 학습 시작]({{ '/assets/img/늦었다고시작할때가.jpg' | relative_url }})
+![DevOps 학습 시작](/assets/img/늦었다고시작할때가.jpg)
