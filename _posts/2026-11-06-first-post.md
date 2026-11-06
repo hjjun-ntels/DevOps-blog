@@ -1,4 +1,3 @@
-
 ---
 title: "DevOps First Post"
 date: 2026-11-06 18:00:00 +0900
