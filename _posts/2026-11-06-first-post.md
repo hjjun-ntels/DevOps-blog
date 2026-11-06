@@ -7,7 +7,7 @@ tags: [devops, linux, infrastructure]
 description: "DevOps Study"
 ---
 
-## 시작하며
+## Prologue
 
 ESN 프로젝트가 끝나간다.
 
@@ -17,7 +17,7 @@ ESN은 VNF 기반의 환경이었고, 다음 프로젝트가 뭐가 될지 모�
 
 공부해보자.
 
-## 앞으로 기록할 내용
+## TODO
 
 이 블로그에는 다음과 같은 내용을 기록하려고 한다.
 
@@ -37,7 +37,7 @@ ESN은 VNF 기반의 환경이었고, 다음 프로젝트가 뭐가 될지 모�
     - Prometheus — 메트릭 수집 및 모니터링
     - Grafana — 모니터링 데이터 시각화 및 대시보드 구성
 
-## 목표
+## Goal
 
 Docker부터 시작해서 Kubernetes, AWS, Terraform, CI/CD, 모니터링까지 하나씩 공부해 볼 생각이다.
 
